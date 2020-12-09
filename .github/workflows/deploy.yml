@@ -29,4 +29,5 @@ jobs:
         with:
           cluster_name: ${{ env.GKE_CLUSTER }}
           location: ${{ env.GKE_REGION }}
-      # - name: Rollout on Kubernetes
+      - name: Rollout on Kubernetes
+        run: kubectl rollout restart deployment/demo-app
